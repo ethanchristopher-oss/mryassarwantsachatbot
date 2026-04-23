@@ -1,9 +1,28 @@
+# Environment secrets
 .env
-node_modules/
-dist/
-*.json.key
-service-account*.json
+*.env
+!.env.example
+
+# Firebase keys
+*service-account*.json
 *firebase-adminsdk*.json
-__pycache__/
-*.pyc
-.venv/
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Session data
+sessions.json
