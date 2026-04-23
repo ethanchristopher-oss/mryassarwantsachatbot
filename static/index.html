@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <button id="new-chat-btn" class="new-chat-btn">+ New Chat</button>
+            
+            <div class="sidebar-section">
+                <div class="section-header">Memory</div>
+                <div id="memory-tree" class="memory-tree"></div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="section-header">Chats</div>
+                <div id="chat-list" class="chat-list"></div>
+            </div>
+        </aside>
+        
+        <main class="main-content">
+            <div id="chat-view" class="chat-view">
+                <div id="messages" class="messages"></div>
+                <div class="input-area">
+                    <textarea id="message-input" placeholder="Type a message..." rows="1"></textarea>
+                    <button id="send-btn">Send</button>
+                </div>
+            </div>
+            
+            <div id="editor-view" class="editor-view" style="display: none;">
+                <div class="editor-header">
+                    <button id="back-to-chat-btn" class="back-btn">← Back to chat</button>
+                    <span id="editor-filename" class="editor-filename"></span>
+                    <button id="save-note-btn" class="save-btn">Save</button>
+                </div>
+                <textarea id="note-editor" class="note-editor"></textarea>
+            </div>
+        </main>
+    </div>
+    
+    <div id="toast" class="toast" style="display: none;"></div>
+    
+<script type="module" src="/static/script.js"></script>
+</body>
+</html>
